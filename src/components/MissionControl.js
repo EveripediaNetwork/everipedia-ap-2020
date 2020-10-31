@@ -23,11 +23,9 @@ export default function MissionControl(
         <meta name="twitter:description" content={description} />
         <meta
           name="twitter:image"
-          content="https://a302b279ae62.ngrok.io/kovan-screenshot.png"
-          // content="https://everipedia-ap-2020.vercel.app/kovan-screenshot.png"
+          content="https://everipedia-ap-2020.vercel.app/kovan-screenshot.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
-        {/* <meta name="twitter:card" content="summary" /> */}
       </Head>
 
       <main className={styles.main}>
