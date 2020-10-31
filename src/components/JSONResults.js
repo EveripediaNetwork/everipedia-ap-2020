@@ -49,8 +49,8 @@ export const JSONResults = (
             <br />
           </>
         )}
-        Associated Press has called {calledStatesCount} out of 52 states. (50
-        states + D.C. + US)
+        Associated Press has called <b>{calledStatesCount}</b> out of 52 states.
+        (50 states + D.C. + US)
       </p>
       <pre className={styles.description} style={{ textAlign: "left" }}>
         <code className={styles.code}>

@@ -38,13 +38,15 @@ export default function MissionControl(
         <p className={styles.description}>
           You are viewing{" "}
           <b style={{ textDecoration: "underline" }}>{environment}</b>, click
-          <Link href={environment === "mainnet" ? "/kovan" : "/"}>
-            <a style={{ textDecoration: "underline", fontWeight: "bold" }}>
-              {" "}
-              here to view{" "}
-              {environment === "mainnet" ? "kovan testnet" : "mainnet"}
-            </a>
-          </Link>
+          <span style={{ backgroundColor: "#FFFF00" }}>
+            <Link href={environment === "mainnet" ? "/kovan" : "/"}>
+              <a style={{ textDecoration: "underline", fontWeight: "bold" }}>
+                {" "}
+                here to view{" "}
+                {environment === "mainnet" ? "kovan testnet" : "mainnet"}
+              </a>
+            </Link>
+          </span>
         </p>
 
         <JSONResults environment={environment} allWinners={allWinners} />
