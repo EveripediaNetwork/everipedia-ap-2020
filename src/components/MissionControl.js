@@ -4,28 +4,30 @@ import Link from "next/link";
 import { JSONResults } from "./JSONResults";
 import styles from "../../styles/Home.module.css";
 
+const title = "Everipedia + AP Election Mission Control";
+const description =
+  "The Associated Press teams up with Everipedia to publish election results on the blockchain. Join us November 3rd!";
 export default function MissionControl(
   { environment, allWinners } /* mainnet or kovan */
 ) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>AP Election Results Example</title>
-        <meta name="twitter:title" content="AP Election Results Example" />
-        <meta
-          name="description"
-          content="The Associated Press teams up with Everipedia to verify US election results."
-        />
+        <title>{title}</title>
+        <meta name="twitter:title" content={title} />
+        <meta name="description" content={description} />
         <link
           rel="icon"
           href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/flag-for-united-states_1f1fa-1f1f8.png"
         />
+        <meta name="twitter:description" content={description} />
         <meta
-          name="twitter:description"
-          content="The Associated Press teams up with Everipedia to verify US election results."
+          name="twitter:image"
+          content="https://a302b279ae62.ngrok.io/kovan-screenshot.png"
+          // content="https://everipedia-ap-2020.vercel.app/kovan-screenshot.png"
         />
-        <meta name="twitter:image" content="/kovan-screenshot.png" />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:card" content="summary" /> */}
       </Head>
 
       <main className={styles.main}>
