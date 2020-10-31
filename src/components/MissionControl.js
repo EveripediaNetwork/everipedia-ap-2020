@@ -11,16 +11,29 @@ export default function MissionControl(
     <div className={styles.container}>
       <Head>
         <title>AP Election Results Example</title>
+        <meta name="twitter:title" content="AP Election Results Example" />
+        <meta
+          name="description"
+          content="The Associated Press teams up with Everipedia to verify US election results."
+        />
         <link
           rel="icon"
           href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/237/flag-for-united-states_1f1fa-1f1f8.png"
         />
+        <meta
+          name="twitter:description"
+          content="The Associated Press teams up with Everipedia to verify US election results."
+        />
+        <meta name="twitter:image" content="/kovan-screenshot.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to{" "}
-          <a href="https://docs.everipedia.org">AP Election Mission Control</a>
+          <a href="https://docs.everipedia.org" target="_blank">
+            AP Election Mission Control
+          </a>
         </h1>
         <p className={styles.description}>
           You are viewing{" "}

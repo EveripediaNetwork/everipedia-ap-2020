@@ -2,7 +2,7 @@ import MissionControl from "../src/components/MissionControl";
 import { allStates } from "../src/all-states";
 import { mainnetContract } from "../src/mainnet/election-contract";
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const allWinners = {};
   const fetchAllStates = allStates.map((state) => {
     return mainnetContract.methods

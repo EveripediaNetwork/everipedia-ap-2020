@@ -75,19 +75,6 @@ const abi = [
   {
     inputs: [
       {
-        internalType: "string",
-        name: "_key",
-        type: "string",
-      },
-    ],
-    name: "deleteMappingElement",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
         internalType: "bytes32",
         name: "_requestId",
         type: "bytes32",
@@ -124,11 +111,6 @@ const abi = [
   },
   {
     inputs: [
-      {
-        internalType: "address",
-        name: "_oracle",
-        type: "address",
-      },
       {
         internalType: "string",
         name: "_jobId",
