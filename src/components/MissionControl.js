@@ -54,23 +54,28 @@ export default function MissionControl(
         <br />
         <hr style={{ width: "100%" }} />
         <br />
+        <h1 className={styles.title}>Developer Docs</h1>
         <div className={styles.grid}>
           <a
-            href="https://docs.everipedia.org/eth/mainnet-oracle"
+            href="https://docs.everipedia.org/eth/fetch-election-calls-with-solidity"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h3>Mainnet Eth Documentation &rarr;</h3>
+            <h3>Fetch election calls with Solidity &rarr;</h3>
+            <p>
+              For Ethereum developers using the Solidity smart-contract language
+            </p>
           </a>
 
           <a
-            href="https://docs.everipedia.org/eth/kovan-testnet-oracle"
+            href="https://docs.everipedia.org/eth/fetch-election-calls-with-web3"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h3>Kovan Testnet Documentation &rarr;</h3>
+            <h3>Fetch election calls with web3 &rarr;</h3>
+            <p>For Ethereum developers using Javascript (like this web app)</p>
           </a>
 
           <a
@@ -80,7 +85,7 @@ export default function MissionControl(
             rel="noopener noreferrer"
           >
             <h3>EOS Contract Documentation &rarr;</h3>
-            <p>Discover how to consume election data on the EOS network.</p>
+            <p>For EOS developers</p>
           </a>
         </div>
       </main>

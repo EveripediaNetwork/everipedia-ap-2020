@@ -51,6 +51,8 @@ export const JSONResults = (
         )}
         Associated Press has called <b>{calledStatesCount}</b> out of 52 states.
         (50 states + D.C. + US)
+        <br />
+        This data is read directly from the Ethereum blockchain.
       </p>
       <pre className={styles.description} style={{ textAlign: "left" }}>
         <code className={styles.code}>
