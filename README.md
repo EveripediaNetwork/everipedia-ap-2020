@@ -17,9 +17,11 @@ This is a boilerplate for developers to view the raw blockchain data for the U.S
 ### First, add your environment variables to `.env.local`. You can get these Infura URL's [here](https://infura.io/dashboard/ethereum)
 
 ```env
-INFURA_KOVAN_HTTP="REPLACE_THIS_WITH_AN_INFURA_KOVAN_URL"
-INFURA_MAINNET_HTTP="REPLACE_THIS_WITH_AN_INFURA_MAINNET_URL"
+INFURA_KOVAN_HTTP=REPLACE_THIS_WITH_AN_INFURA_KOVAN_URL
+INFURA_MAINNET_HTTP=REPLACE_THIS_WITH_AN_INFURA_MAINNET_URL
 ```
+> Ensure there are no extra semicolons or characters after your infura URL. You will get Infura errors.
+
 ### Second, install
 ```sh
 npm install
