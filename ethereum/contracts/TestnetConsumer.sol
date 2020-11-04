@@ -14,19 +14,18 @@ contract ATestnetConsumer is ChainlinkClient, Ownable {
   // mapping of state code ("CO", "TN", "US") to Winner
   mapping(string => Winner) public presidentialWinners;
   mapping(bytes32 => string) private requestIdToState;
-  address private oracleAddress = 0xe1C920338dE5F46cdCB045BA5d4e7fcb4A69F01B;
 
   constructor() public Ownable() {
     setPublicChainlinkToken();
   }
 
-  function requestPresidentialVotes(string memory _jobId, string memory _state)
+  function requestPresidentialVotes(address _oracle, string memory _jobId, string memory _state)
     public
     onlyOwner
   {
     Chainlink.Request memory req = buildChainlinkRequest(stringToBytes32(_jobId), address(this), this.fulfillpresidentialWinners.selector);
     req.add("copyPath", _state);
-    bytes32 requestId = sendChainlinkRequestTo(oracleAddress, req, ORACLE_PAYMENT);
+    bytes32 requestId = sendChainlinkRequestTo(_oracle, req, ORACLE_PAYMENT);
     requestIdToState[requestId] = _state;
   }
   
@@ -42,6 +41,10 @@ contract ATestnetConsumer is ChainlinkClient, Ownable {
        resultNow: now,
        resultBlock: block.number
    });
+  }
+  
+  function deleteMappingElement(string memory _key) public onlyOwner {
+      delete presidentialWinners[_key];
   }
 
   function getChainlinkToken() private view returns (address) {
